@@ -19,7 +19,7 @@ a {
     width: 100%;
     left: -100%;
     background: white;
-    transition: 0.7s;
+    transition: 1s;
     text-align: center;
 }
 .nav ul {
