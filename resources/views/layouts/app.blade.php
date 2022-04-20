@@ -18,9 +18,9 @@
         <header class="header">
             <nav class="nav" id="nav">
                 <ul>
-                  <li><a href="#">リンク1</a></li>
-                  <li><a href="#">リンク2</a></li>
-                  <li><a href="#">リンク3</a></li>
+                  <li><a class="drawer_link" href="/">HOME</a></li>
+                  <li><a class="drawer_link" href="/register">Registration</a></li>
+                  <li><a class="drawer_link" href="/login">Login</a></li>
                 </ul>
               </nav>
               <div class="menu" id="menu">
