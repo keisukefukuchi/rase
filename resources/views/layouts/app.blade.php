@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
 </head>
 <body>
     @guest
