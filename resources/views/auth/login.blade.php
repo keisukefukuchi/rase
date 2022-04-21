@@ -5,17 +5,19 @@
 @section('content')
     <div class="login-container">
         <div class="login-wrapper">
-            <div class="login-form">
+            <div class="login-box">
                 <p class="login-title">Login</p>
-                <form action="/login" method="post">
+                <form class="login-form" action="/login" method="post">
                     @csrf
-                    <div class="email login-input">
-                        <input type="email" name="email" placeholder="メールアドレス" value="">
+                    <div class="email">
+                        <i class="icon fa-solid fa-envelope fa-lg"></i>
+                        <input class="login-input login-email" type="email" name="email" placeholder="Email" value="">
                     </div>
-                    <div class="password login-input">
-                        <input type="password" name="password" placeholder="パスワード" value="">
+                    <div class="password">
+                        <i class="icon fa-solid fa-lock fa-lg"></i>
+                        <input class="login-input login-password" type="password" name="password" placeholder="Password" value="">
                     </div>
-                    <button type="submit" class="button">ログイン</button>
+                    <button type="submit" class="button login-bottom">ログイン</button>
                 </form>
             </div>
         </div>

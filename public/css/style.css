@@ -1,5 +1,12 @@
+html {
+    height: 100vh;
+}
+body {
+    height: 100%;
+}
 header {
     display: flex;
+    height: 8%;
 }
 .header-title {
     font-size: 30px;
@@ -21,6 +28,7 @@ a {
     background: white;
     transition: 1s;
     text-align: center;
+    z-index: 999;
 }
 .nav ul {
     position: absolute;
@@ -42,6 +50,7 @@ a {
     position: relative;
     left: 20px;
     top: 20px;
+    z-index: 999;
 }
 .menu__line--top,
 .menu__line--middle,
@@ -80,4 +89,7 @@ a {
 }
 .in {
     transform: translateX(100%);
+}
+main {
+    height: 92%;
 }
