@@ -1,21 +1,27 @@
 @extends('layouts.app')
 
-@section('title', 'ログイン画面')
+@section('title', '会員登録画面')
 
 @section('content')
-    <div class="login-container">
-        <div class="login-wrapper">
-            <div class="login-form">
-                <p class="login-title">Login</p>
-                <form action="/login" method="post">
+    <div class="register-container">
+        <div class="register-wrapper">
+            <div class="register-box">
+                <p class="register-title">Registration</p>
+                <form class="register-form" action="/register" method="post">
                     @csrf
-                    <div class="email login-input">
-                        <input type="email" name="email" placeholder="メールアドレス" value="">
+                    <div class="user-name">
+                        <i class="icon fa-solid fa-user fa-lg"></i>
+                        <input class="register-input register-user-name" type="text" name="name" placeholder="Username" value="">
                     </div>
-                    <div class="password login-input">
-                        <input type="password" name="password" placeholder="パスワード" value="">
+                    <div class="email">
+                        <i class="icon fa-solid fa-envelope fa-lg"></i>
+                        <input class="register-input register-email" type="email" name="email" placeholder="Email" value="">
                     </div>
-                    <button type="submit" class="button">ログイン</button>
+                    <div class="password">
+                        <i class="icon fa-solid fa-lock fa-lg"></i>
+                        <input class="register-input register-password" type="password" name="password" placeholder="Password" value="">
+                    </div>
+                    <button type="submit" class="button register-bottom">会員登録</button>
                 </form>
             </div>
         </div>
