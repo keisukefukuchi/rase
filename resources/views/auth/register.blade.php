@@ -21,7 +21,7 @@
                         <i class="icon fa-solid fa-lock fa-lg"></i>
                         <input class="register-input register-password" type="password" name="password" placeholder="Password" value="">
                     </div>
-                    <button type="submit" class="button register-bottom">会員登録</button>
+                    <button type="submit" class="register-bottom">会員登録</button>
                 </form>
             </div>
         </div>
