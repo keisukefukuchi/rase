@@ -34,7 +34,21 @@
         </header>
     @endguest
     @auth
-
+        <header class="header">
+            <nav class="nav" id="nav">
+                <ul>
+                  <li><a class="drawer_link" href="/">HOME</a></li>
+                  <li><a class="drawer_link" href="/logout">Logout</a></li>
+                  <li><a class="drawer_link" href="/mypage">Mypage</a></li>
+                </ul>
+              </nav>
+              <div class="menu" id="menu">
+                <span class="menu__line--top"></span>
+                <span class="menu__line--middle"></span>
+                <span class="menu__line--bottom"></span>
+              </div>
+            <h1 class="header-title">Rese</h1>
+        </header>
     @endauth
     <main>
         @yield('content')
