@@ -17,7 +17,7 @@
                         <i class="icon fa-solid fa-lock fa-lg"></i>
                         <input class="login-input login-password" type="password" name="password" placeholder="Password" value="">
                     </div>
-                    <button type="submit" class="button login-bottom">ログイン</button>
+                    <button type="submit" class="login-bottom">ログイン</button>
                 </form>
             </div>
         </div>
