@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class,'getLogout']);
-    Route::get('/', [ShopController::class,'getIndex']);
+    Route::get('/', [ShopController::class,'index']);
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);
