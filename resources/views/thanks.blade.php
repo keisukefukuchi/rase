@@ -10,10 +10,10 @@
                 <form class="thanks-form" action="/login" method="post">
                     @csrf
                     <div class="email">
-                        <input class="thanks-input thanks-email" type="hidden" name="email" placeholder="Email" value="">
+                        <input class="thanks-input thanks-email" type="hidden" name="email" placeholder="Email" value="{{ $email }}">
                     </div>
                     <div class="password">
-                        <input class="thanks-input thanks-password" type="hidden" name="password" placeholder="Password" value="">
+                        <input class="thanks-input thanks-password" type="hidden" name="password" placeholder="Password" value="{{ $password }}">
                     </div>
                     <div class="button">
                         <button type="submit" class="button thanks-bottom">ログインする</button>

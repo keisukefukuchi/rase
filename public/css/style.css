@@ -93,3 +93,6 @@ a {
 main {
     height: 92%;
 }
+.error {
+    color: red;
+}
