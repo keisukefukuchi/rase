@@ -26,7 +26,7 @@ class AuthController extends Controller
         ]);
         return view('thanks')->with([
             'email'=>$request['email'],
-            'password'=>Hash::make($request['password'])
+            'password'=>$request['password']
         ]);
     }
 
