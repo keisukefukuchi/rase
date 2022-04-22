@@ -20,30 +20,13 @@
 
 <body>
     @guest
-        <header class="header">
-            <nav class="nav" id="nav">
-                <ul>
-                    <li><a class="drawer_link" href="/">HOME</a></li>
-                    <li><a class="drawer_link" href="/register">Registration</a></li>
-                    <li><a class="drawer_link" href="/login">Login</a></li>
-                </ul>
-            </nav>
-            <div class="menu" id="menu">
-                <span class="menu__line--top"></span>
-                <span class="menu__line--middle"></span>
-                <span class="menu__line--bottom"></span>
-            </div>
-            <h1 class="header-title">Rese</h1>
-        </header>
-    @endguest
-    @auth
-        <header class="header">
-            <div class="header-flex">
+        <header>
+            <div class="header-guest">
                 <nav class="nav" id="nav">
                     <ul>
                         <li><a class="drawer_link" href="/">HOME</a></li>
-                        <li><a class="drawer_link" href="/logout">Logout</a></li>
-                        <li><a class="drawer_link" href="/mypage">Mypage</a></li>
+                        <li><a class="drawer_link" href="/register">Registration</a></li>
+                        <li><a class="drawer_link" href="/login">Login</a></li>
                     </ul>
                 </nav>
                 <div class="menu" id="menu">
@@ -53,10 +36,29 @@
                 </div>
                 <h1 class="header-title">Rese</h1>
             </div>
-            <div class="header-find">
-                <input type="select">
-                <input type="select">
-                <input type="text">
+        </header>
+    @endguest
+    @auth
+        <header>
+            <div class="header">
+                <div class="header-flex">
+                    <nav class="nav" id="nav">
+                        <ul>
+                            <li><a class="drawer_link" href="/">HOME</a></li>
+                            <li><a class="drawer_link" href="/logout">Logout</a></li>
+                            <li><a class="drawer_link" href="/mypage">Mypage</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu" id="menu">
+                        <span class="menu__line--top"></span>
+                        <span class="menu__line--middle"></span>
+                        <span class="menu__line--bottom"></span>
+                    </div>
+                    <h1 class="header-title">Rese</h1>
+                </div>
+                <div class="header-find">
+                    @include('find_list')
+                </div>
             </div>
         </header>
     @endauth

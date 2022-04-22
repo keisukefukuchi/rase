@@ -13,6 +13,8 @@ class ShopController extends Controller
 {
     public function index() {
         $shops = Shop::all();
+        $areas = Area::all();
+        $genres = Genre::all();
 
         $items = array();
         foreach($shops as $shop) {
@@ -28,7 +30,10 @@ class ShopController extends Controller
                 'genre_name' => $genre_name,
             ];
         }
-       
-        return view('index',['items' => $items]);
+        return view('index',[
+            'items' => $items,
+            'areas' => $areas,
+            'genres' => $genres
+        ]);
     }
 }
