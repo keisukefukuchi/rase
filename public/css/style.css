@@ -132,3 +132,37 @@ main {
     width: 300px;
     border-radius: 10px 10px 0 0;
 }
+.content {
+    padding: 20px;
+}
+.shop-name {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.hashtag {
+    display: flex;
+    padding-bottom: 20px;
+}
+.area-name {
+    font-size: 14px;
+    padding-right: 5px;
+}
+.genre-name {
+    font-size: 14px;
+    padding-left: 5px;
+}
+.shop-link {
+    display: flex;
+    justify-content: space-between;
+}
+.shop-details {
+    border: none;
+    outline: none;
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.shop-like {
+    color: lightgrey;
+}
