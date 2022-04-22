@@ -109,3 +109,15 @@ main {
 .error {
     color: red;
 }
+.container {
+    margin-top: 20px;
+    width: 100%;
+}
+.wrapper {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.card {
+    border: 1px solid #000;
+}

@@ -5,7 +5,12 @@
 @section('content')
     <div class="container">
         <div class="wrapper">
-            <h1>メインページ</h1>
+            @foreach($shops as $shop)
+                <div class="card">
+                    <img src="{{$shop->img_url}}" alt="">
+                    {{$shop->name}}
+                </div>
+            @endforeach
         </div>
     </div>
 @endsection
