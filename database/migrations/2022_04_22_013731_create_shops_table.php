@@ -15,6 +15,10 @@ class CreateShopsTable extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('area_id'); # 外部キー
+            $table->foreign('area_id')->references('id')->on('areas');
+            $table->unsignedBigInteger('genre_id'); # 外部キー
+            $table->foreign('genre_id')->references('id')->on('genres');
             $table->timestamps();
         });
     }
