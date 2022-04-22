@@ -8,46 +8,56 @@
     <title>
         @yield('title')
     </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('css/register.css') }}">
     <link rel="stylesheet" href="{{ asset('css/thanks.css') }}">
 </head>
+
 <body>
     @guest
         <header class="header">
             <nav class="nav" id="nav">
                 <ul>
-                  <li><a class="drawer_link" href="/">HOME</a></li>
-                  <li><a class="drawer_link" href="/register">Registration</a></li>
-                  <li><a class="drawer_link" href="/login">Login</a></li>
+                    <li><a class="drawer_link" href="/">HOME</a></li>
+                    <li><a class="drawer_link" href="/logout">Registration</a></li>
+                    <li><a class="drawer_link" href="/mypage">Login</a></li>
                 </ul>
-              </nav>
-              <div class="menu" id="menu">
+            </nav>
+            <div class="menu" id="menu">
                 <span class="menu__line--top"></span>
                 <span class="menu__line--middle"></span>
                 <span class="menu__line--bottom"></span>
-              </div>
+            </div>
             <h1 class="header-title">Rese</h1>
         </header>
     @endguest
     @auth
         <header class="header">
-            <nav class="nav" id="nav">
-                <ul>
-                  <li><a class="drawer_link" href="/">HOME</a></li>
-                  <li><a class="drawer_link" href="/logout">Logout</a></li>
-                  <li><a class="drawer_link" href="/mypage">Mypage</a></li>
-                </ul>
-              </nav>
-              <div class="menu" id="menu">
-                <span class="menu__line--top"></span>
-                <span class="menu__line--middle"></span>
-                <span class="menu__line--bottom"></span>
-              </div>
-            <h1 class="header-title">Rese</h1>
+            <div class="header-flex">
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li><a class="drawer_link" href="/">HOME</a></li>
+                        <li><a class="drawer_link" href="/register">Logout</a></li>
+                        <li><a class="drawer_link" href="/login">Mypage</a></li>
+                    </ul>
+                </nav>
+                <div class="menu" id="menu">
+                    <span class="menu__line--top"></span>
+                    <span class="menu__line--middle"></span>
+                    <span class="menu__line--bottom"></span>
+                </div>
+                <h1 class="header-title">Rese</h1>
+            </div>
+            <div class="header-find">
+                <input type="select">
+                <input type="select">
+                <input type="text">
+            </div>
         </header>
     @endauth
     <main>
