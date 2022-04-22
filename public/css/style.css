@@ -114,10 +114,21 @@ main {
     width: 100%;
 }
 .wrapper {
+    width: 90%;
+    margin: 0 auto;
     display: grid;
     gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .card {
+    margin: 0 auto;
     border: 1px solid #000;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+.shop-img {
+    vertical-align: top;
+    height: 150px;
+    width: 300px;
+    border-radius: 10px 10px 0 0;
 }
