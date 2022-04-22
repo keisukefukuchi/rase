@@ -110,7 +110,7 @@ main {
     color: red;
 }
 .container {
-    margin-top: 20px;
+    padding: 50px 0;
     width: 100%;
 }
 .wrapper {
