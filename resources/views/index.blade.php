@@ -15,7 +15,9 @@
                             <p class="genre-name">#{{ $shop->genre->name }}</p>
                         </div>
                         <div class="shop-link">
-                            <button class="shop-details">詳しく見る</button>
+                            <form action="{{route('shop.detail',$shop->id)}}" method="get">
+                                <button class="shop-details">詳しく見る</button>
+                            </form>
                             <a href="" class="shop-like">
                                 <i class="fa-solid fa-heart fa-2x"></i>
                             </a>

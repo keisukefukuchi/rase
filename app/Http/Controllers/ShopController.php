@@ -40,10 +40,29 @@ class ShopController extends Controller
             'genre_id' => $genre_id,
         ];
 
-        
+
         return view('index', $items);
     }
-    public function search(Request $request) {
+    public function detail(Request $request,$id) {
+        
+        $shop = Shop::find($id);
+        $times = config('times');
+        $numbers = config('numbers');
+        // $reviews = Review::where('shop_id', $id)
+        //     ->orderBy('score', 'desc')
+        //     ->limit(3)
+        //     ->get();
+        // $courses = Course::where('shop_id', $id)->get();
 
+        $items = [
+            'shop' => $shop,
+
+            'times' => $times,
+            'numbers' => $numbers,
+            // 'reviews' => $reviews,
+            // 'courses' => $courses,
+        ];
+
+        return view('detail', $items);
     }
 }

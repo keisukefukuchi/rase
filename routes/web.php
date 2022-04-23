@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class,'getLogout']);
     Route::get('/', [ShopController::class,'index']);
-    Route::get('/search', [ShopController::class,'search']);
+    Route::get('/detail/{shop_id}', [ShopController::class,'detail'])->name('shop.detail');
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);
