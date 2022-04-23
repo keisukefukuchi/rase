@@ -40,19 +40,10 @@ class ShopController extends Controller
             'genre_id' => $genre_id,
         ];
 
+        
         return view('index', $items);
     }
     public function search(Request $request) {
-        $all = $request->all();
-        $area = (int)$all['area'];
-        $genre = (int)$all['genre'];
 
-        if($area == 0) {
-            $areas = Area::all();
-        }
-
-        if($genre == 0) {
-            $genres = Genre::all();
-        }
     }
 }
