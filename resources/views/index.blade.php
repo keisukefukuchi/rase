@@ -5,14 +5,14 @@
 @section('content')
     <div class="container">
         <div class="wrapper">
-            @foreach ($items as $item)
+            @foreach ($shops as $shop)
                 <div class="card">
-                    <img class="shop-img" src="{{ $item['shop']->img_url }}" alt="">
+                    <img class="shop-img" src="{{ $shop->img_url }}" alt="">
                     <div class="content">
-                        <h1 class="shop-name">{{ $item['shop']->name }}</h1>
+                        <h1 class="shop-name">{{ $shop->name }}</h1>
                         <div class="hashtag">
-                            <p class="area-name">#{{ $item['area_name'] }}</p>
-                            <p class="genre-name">#{{ $item['genre_name'] }}</p>
+                            <p class="area-name">#{{ $shop->area->name }}</p>
+                            <p class="genre-name">#{{ $shop->genre->name }}</p>
                         </div>
                         <div class="shop-link">
                             <button class="shop-details">詳しく見る</button>
