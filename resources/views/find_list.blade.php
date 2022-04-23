@@ -1,5 +1,4 @@
 <form class="search-form" action="/" method="get">
-    @csrf
     <select id="area" name="area" class="search-area search">
         <option value="0" selected>All area</option>
         @foreach ($areas as $area)
