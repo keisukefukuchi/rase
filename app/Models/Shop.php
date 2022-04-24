@@ -25,4 +25,8 @@ class Shop extends Model
     {
         return $this->belongsTo('App\Models\Area');
     }
+    public function likes()
+    {
+        return $this->hasMany('App\Models\Like');
+    }
 }
