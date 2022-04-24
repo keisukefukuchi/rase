@@ -44,7 +44,7 @@ class ShopController extends Controller
         return view('index', $items);
     }
     public function detail(Request $request,$id) {
-        
+
         $shop = Shop::find($id);
         $times = config('times');
         $numbers = config('numbers');
@@ -62,7 +62,7 @@ class ShopController extends Controller
             // 'reviews' => $reviews,
             // 'courses' => $courses,
         ];
-
+        
         return view('detail', $items);
     }
 }
