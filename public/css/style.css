@@ -417,11 +417,14 @@ main {
     gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-.reservation-update-form {
-    width: 100%;
-    text-align: right;
+.mypage-button-flex {
+    display: flex;
+    justify-content: flex-end;
 }
-.reservation-update-button {
+.reservation-update-form,.review-form {
+    margin: 0 10px;
+}
+.reservation-update-button,.review-button {
     border: 1px solid white;
     background-color: #0066FF;
     color: white;

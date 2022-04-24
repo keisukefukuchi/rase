@@ -38,11 +38,18 @@
                                 <td>{{$reservation->num_of_users}}人</td>
                             </tr>
                         </table>
-                        <form class="reservation-update-form" action="{{route('reservation.update', ['id' => $reservation->id])}}" method="get">
-                            <button class="reservation-update-button">
-                                予約情報変更
-                            </button>
-                        </form>
+                        <div class="mypage-button-flex">
+                            <form class="reservation-update-form" action="{{route('reservation.update', ['id' => $reservation->id])}}" method="get">
+                                <button class="reservation-update-button">
+                                    予約情報変更
+                                </button>
+                            </form>
+                            <form class="review-form" action="" method="get">
+                                <button class="review-button">
+                                    レビュー
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 @endforeach
             </div>
