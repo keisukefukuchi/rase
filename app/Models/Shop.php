@@ -31,6 +31,10 @@ class Shop extends Model
     {
         return $this->hasMany('App\Models\Like');
     }
+    public function reserves()
+    {
+        return $this->hasMany('App\Models\Reserve');
+    }
     public function is_liked_by_auth_user()
     {
         $id = Auth::id();

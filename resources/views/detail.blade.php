@@ -23,11 +23,12 @@
                 @csrf
                 <div class="reservation-input">
                     <h1 class="reservation-head">予約</h1>
+                    <input type="hidden" value="{{$shop->id}}" name="shop_id">
                     <div class="reservation-day">
-                        <input type="date" name="date" value="{{$date}}" id="tomorrow" min="{{$tomorrow}}">
+                        <input type="date" name="start_date" value="{{$tomorrow}}" id="tomorrow" min="{{$tomorrow}}">
                     </div>
                     <div class="reservation-time">
-                        <input type="time" name="time" value="{{$time}}">
+                        <input type="time" name="start_time" value="{{$time}}">
                     </div>
                     <div class="reservation-person">
                         <select name="num_of_users">

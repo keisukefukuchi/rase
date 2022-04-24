@@ -48,7 +48,6 @@ class ShopController extends Controller
     public function detail($id) {
         $now = Carbon::now();
         $shop = Shop::find($id);
-        $date = $now->format('Y-m-d');
         $time = $now->format('H:i');
 
         $tomorrow = $now->tomorrow()->format('Y-m-d');
@@ -61,7 +60,6 @@ class ShopController extends Controller
 
         $items = [
             'shop' => $shop,
-            'date' => $date,
             'time' => $time,
             'tomorrow' => $tomorrow,
             // 'reviews' => $reviews,
