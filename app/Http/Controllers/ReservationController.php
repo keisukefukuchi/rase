@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reservation;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,6 +28,19 @@ class ReservationController extends Controller
         ]);
 
         return view('reservation');
+    }
+    public function edit($id) {
+        $reservation = Reservation::with(['shop'])->where('id', $id)->first();
+        return view('reservation_update',[
+            'reservation' => $reservation,
+        ]);
+    }
+    public function update(Request $request,$id) {
+        $items = $request->all();
+        unset($items['_token']);
+        $reservation = Reservation::where('id', $id)->first();
+        $reservation->fill($items)->save();
+        return redirect('/mypage');
     }
     public function destroy($id)
     {

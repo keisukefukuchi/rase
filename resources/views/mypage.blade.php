@@ -15,7 +15,7 @@
                                 <p class="reservation-id">予約{{$reservation->id}}</p>
                             </div>
                             <form action="{{route('reservation.destory', ['id' => $reservation->id])}}" method="get">
-                                <button class="reservation-button">
+                                <button class="reservation-delite-button">
                                     <i class="reservation-delite fa-solid fa-circle-xmark fa-2x"></i>
                                 </button>
                             </form>
@@ -38,6 +38,11 @@
                                 <td>{{$reservation->num_of_users}}人</td>
                             </tr>
                         </table>
+                        <form class="reservation-update-form" action="{{route('reservation.update', ['id' => $reservation->id])}}" method="get">
+                            <button class="reservation-update-button">
+                                予約情報変更
+                            </button>
+                        </form>
                     </div>
                 @endforeach
             </div>

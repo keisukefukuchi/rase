@@ -350,7 +350,7 @@ main {
     font-size: 22px;
     line-height: 30px;
 }
-.reservation-button {
+.reservation-delite-button {
     border: 0;
     outline: 0;
     background-color: #0066FF;
@@ -385,4 +385,13 @@ main {
     gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-
+.reservation-update-form {
+    width: 100%;
+    text-align: right;
+}
+.reservation-update-button {
+    border: 1px solid white;
+    background-color: #0066FF;
+    color: white;
+    border-radius: 10px;
+}

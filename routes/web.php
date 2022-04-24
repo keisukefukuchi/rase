@@ -28,7 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/reply/unlike/{id}', [LikeController::class, 'destroy'])->name('shop.unlike');
     Route::post('/reservation', [ReservationController::class,'store']);
     Route::get('/mypage', [UserController::class,'index']);
-    Route::get('/mypage/reservation/{id}', [ReservationController::class, 'destroy'])->name('reservation.destory');
+    Route::get('/mypage/reservation/destroy/{id}', [ReservationController::class, 'destroy'])->name('reservation.destory');
+    Route::get('/mypage/reservation/update/{id}', [ReservationController::class, 'edit'])->name('reservation.update');
+    Route::post('/mypage/reservation/update/{id}', [ReservationController::class, 'update'])->name('reservation.update');
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);
