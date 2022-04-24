@@ -22,7 +22,7 @@
 
 .login-title {
     padding: 22px;
-    background-color: blue;
+    background-color: #0066FF;
     color: white;
     font-size: 20px;
     border-radius: 10px 10px 0 0;
@@ -50,7 +50,7 @@
 .login-bottom {
     border: none;
     outline: none;
-    background-color: blue;
+    background-color: #0066FF;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
