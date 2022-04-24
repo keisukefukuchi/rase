@@ -311,6 +311,37 @@ main {
     width: 100%;
     color: white;
 }
+/* review */
+.shop-review {
+    width: 90%;
+    margin: 100px auto 0 auto;
+}
+.shop-review h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.shop-review-card {
+    width: 90%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.shop-review-flex {
+    display: flex;
+    justify-content: space-between;
+}
+.shop-review-left {
+    width: 40%;
+}
+.shop-review-right {
+    width: 50%;
+}
+
+.shop-review-comment {
+    font-size: 18px;
+}
 /* mypage */
 .mypage-wrapper {
     width: 90%;
