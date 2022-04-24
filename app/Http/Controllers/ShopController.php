@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Area;
 use App\Models\genre;
 use App\Models\Shop;
+use Carbon\Carbon;
+
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -44,10 +46,11 @@ class ShopController extends Controller
         return view('index', $items);
     }
     public function detail(Request $request,$id) {
-
+        $now = Carbon::now();
         $shop = Shop::find($id);
         $times = config('times');
         $numbers = config('numbers');
+
         // $reviews = Review::where('shop_id', $id)
         //     ->orderBy('score', 'desc')
         //     ->limit(3)
@@ -62,7 +65,7 @@ class ShopController extends Controller
             // 'reviews' => $reviews,
             // 'courses' => $courses,
         ];
-        
+
         return view('detail', $items);
     }
 }
