@@ -46,3 +46,37 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
+/* reservation */
+.reservation-thanks-box {
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+    color: #000;
+    padding: 100px 0;
+}
+
+.reservation-thanks-title {
+    text-align: center;
+    font-size: 26px;
+    border-radius: 10px 10px 0 0;
+    font-weight: lighter;
+    padding-bottom: 50px;
+}
+.reservation-thanks-form {
+    width: 350px;
+    margin: 10px auto;
+    padding: 30px 50px;
+}
+.reservation-button a{
+    display: block;
+    text-align: center;
+}
+.reservation-thanks-bottom {
+    border: none;
+    outline: none;
+    background-color: #0066FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

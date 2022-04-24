@@ -26,6 +26,6 @@ class ReservationController extends Controller
             'start_time' => $start_time
         ]);
 
-        return redirect('/');
+        return view('reservation');
     }
 }

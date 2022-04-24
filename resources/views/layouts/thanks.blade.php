@@ -24,8 +24,8 @@
             <nav class="nav" id="nav">
                 <ul>
                     <li><a class="drawer_link" href="/">HOME</a></li>
-                    <li><a class="drawer_link" href="/register">Registration</a></li>
-                    <li><a class="drawer_link" href="/login">Login</a></li>
+                    <li><a class="drawer_link" href="/logout">Logout</a></li>
+                    <li><a class="drawer_link" href="/mypage">Mypage</a></li>
                 </ul>
             </nav>
             <div class="menu" id="menu">
