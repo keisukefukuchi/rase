@@ -46,11 +46,7 @@
                         <ul>
                             <li><a class="drawer_link" href="/">HOME</a></li>
                             <li><a class="drawer_link" href="/logout">Logout</a></li>
-                            <li>
-                                <form class="drawer_link" action="" method="get">
-                                    <button class="">Mypage</button>
-                                </form>
-                            </li>
+                            <li><a class="drawer_link" href="/mypage">Mypage</a></li>
                         </ul>
                     </nav>
                     <div class="menu" id="menu">
