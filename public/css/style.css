@@ -310,3 +310,79 @@ main {
     width: 100%;
     color: white;
 }
+/* mypage */
+.mypage-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.mypage-left {
+    width: 40%;
+    margin-right: 10px;
+}
+.reservation-informations {
+    font-size: 24px;
+    margin: 70px 0 30px 0;
+}
+.reservation-card {
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+    background-color: #0066FF;
+    border-radius: 10px;
+    padding: 30px 20px 20px 20px;
+    margin: 10px 0;
+}
+.reservation-card-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.reservation-card-head-left {
+    display: flex;
+}
+.reservation-card-head-left i{
+    color: white;
+    background-color: #0066FF;
+    margin-right: 20px;
+
+}
+.reservation-id {
+    color: white;
+    font-size: 22px;
+    line-height: 30px;
+}
+.reservation-button {
+    border: 0;
+    outline: 0;
+    background-color: #0066FF;
+}
+.reservation-delite {
+    color: white;
+    background-color: #0066FF;
+}
+.reservation-info {
+    color: white;
+}
+.reservation-info th {
+    text-align: left;
+    padding: 0 40px 20px 0;
+}
+.mypage-right {
+    width: 50%;
+    margin-left: 10px;
+}
+.mypage-user-name {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+.user-like-shop {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.mypage-like {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+

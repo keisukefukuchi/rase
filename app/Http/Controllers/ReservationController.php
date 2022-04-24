@@ -28,4 +28,9 @@ class ReservationController extends Controller
 
         return view('reservation');
     }
+    public function destroy($id)
+    {
+        Reservation::where('id', $id)->first()->delete();
+        return redirect()->back();
+    }
 }
