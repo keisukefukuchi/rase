@@ -51,6 +51,8 @@ class ShopController extends Controller
         $date = $now->format('Y-m-d');
         $time = $now->format('H:i');
 
+        $tomorrow = $now->tomorrow()->format('Y-m-d');
+
         // $reviews = Review::where('shop_id', $id)
         //     ->orderBy('score', 'desc')
         //     ->limit(3)
@@ -61,6 +63,7 @@ class ShopController extends Controller
             'shop' => $shop,
             'date' => $date,
             'time' => $time,
+            'tomorrow' => $tomorrow,
             // 'reviews' => $reviews,
             // 'courses' => $courses,
         ];

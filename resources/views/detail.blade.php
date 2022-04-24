@@ -24,7 +24,7 @@
                 <div class="reservation-input">
                     <h1 class="reservation-head">予約</h1>
                     <div class="reservation-day">
-                        <input type="date" name="date" value="{{$date}}">
+                        <input type="date" name="date" value="{{$date}}" id="tomorrow" min="{{$tomorrow}}">
                     </div>
                     <div class="reservation-time">
                         <input type="time" name="time" value="{{$time}}">
