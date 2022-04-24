@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\ThanksController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class,'getLogout']);
     Route::get('/', [ShopController::class,'index']);
     Route::get('/detail/{shop_id}', [ShopController::class,'detail'])->name('shop.detail');
+    Route::post('/like',[LikeController::class,'store']);
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);

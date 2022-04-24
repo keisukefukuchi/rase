@@ -136,6 +136,7 @@ main {
     gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+/* main */
 .card {
     margin: 0 auto;
     border: 1px solid #000;
@@ -200,6 +201,8 @@ main {
     border: none;
     outline: none;
 }
+
+/* detail */
 .detail-wrapper {
     width: 90%;
     margin: 0 auto;

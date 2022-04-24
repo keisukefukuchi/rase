@@ -18,9 +18,10 @@
                             <form action="{{route('shop.detail',$shop->id)}}" method="get">
                                 <button class="shop-details">詳しく見る</button>
                             </form>
-                            <a href="" class="shop-like">
+                            <form  class="shop-like" action="/like" method="post">
+                                @csrf
                                 <i class="fa-solid fa-heart fa-2x"></i>
-                            </a>
+                            </form>
                         </div>
                     </div>
                 </div>
