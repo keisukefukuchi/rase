@@ -19,19 +19,20 @@
                 </div>
                 <p class="detail-shop-content">{{ $shop->description }}</p>
             </div>
-            <form class="detail-right">
+            <form class="detail-right" action="/reservation" method="post">
+                @csrf
                 <div class="reservation-input">
                     <h1 class="reservation-head">予約</h1>
                     <div class="reservation-day">
-                        <input type="date">
+                        <input type="date" name="date" value="">
                     </div>
                     <div class="reservation-time">
-                        <input type="time">
+                        <input type="time" name="time" value="">
                     </div>
                     <div class="reservation-person">
-                        <select name="example">
+                        <select name="num_of_users">
                             @for($i=1;$i<=20;$i++)
-                                <option value="">{{$i}}人</option>
+                                <option value="{{$i}}">{{$i}}人</option>
                             @endfor
                         </select>
                     </div>
