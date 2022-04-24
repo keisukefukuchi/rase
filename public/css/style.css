@@ -430,3 +430,43 @@ main {
     color: white;
     border-radius: 10px;
 }
+
+/* review */
+.review-flex {
+    display: flex;
+    justify-content: space-around;
+}
+.review-user-name {
+    color: white;
+    font-size: 20px;
+}
+.review-area {
+    width: 100%;
+    border-radius: 5px;
+}
+.review-input {
+    margin: 20px;
+    width: 90%;
+}
+.review-head {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 30px;
+}
+.shop-review-star {
+    width: 100%;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.shop-review-star i {
+    color: white;
+}
+.review-area {
+    width: 100%;
+}
+.review-five,.review-content {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}

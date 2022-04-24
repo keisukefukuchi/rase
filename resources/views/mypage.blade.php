@@ -44,7 +44,7 @@
                                     予約情報変更
                                 </button>
                             </form>
-                            <form class="review-form" action="" method="get">
+                            <form class="review-form" action="{{route('review.index', ['id' => $reservation->id])}}" method="get">
                                 <button class="review-button">
                                     レビュー
                                 </button>

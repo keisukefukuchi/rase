@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -31,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/mypage/reservation/destroy/{id}', [ReservationController::class, 'destroy'])->name('reservation.destory');
     Route::get('/mypage/reservation/update/{id}', [ReservationController::class, 'edit'])->name('reservation.update');
     Route::post('/mypage/reservation/update/{id}', [ReservationController::class, 'update'])->name('reservation.update');
+    Route::get('/review/{id}', [ReviewController::class, 'index'])->name('review.index');
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);
