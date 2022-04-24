@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Area;
 use App\Models\genre;
+use App\Models\Review;
 use App\Models\Shop;
 use Carbon\Carbon;
+
+
 
 use Illuminate\Http\Request;
 
@@ -52,17 +55,14 @@ class ShopController extends Controller
 
         $tomorrow = $now->tomorrow()->format('Y-m-d');
 
-        // $reviews = Review::where('shop_id', $id)
-        //     ->orderBy('score', 'desc')
-        //     ->limit(3)
-        //     ->get();
+        $reviews = Review::where('shop_id', $id)->paginate(2);
         // $courses = Course::where('shop_id', $id)->get();
 
         $items = [
             'shop' => $shop,
             'time' => $time,
             'tomorrow' => $tomorrow,
-            // 'reviews' => $reviews,
+            'reviews' => $reviews,
             // 'courses' => $courses,
         ];
 

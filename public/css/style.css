@@ -373,19 +373,24 @@ main {
     width: 90%;
     margin: 100px auto 0 auto;
 }
-
+.shop-review-head {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
 .shop-review h1 {
     font-size: 24px;
-    text-align: center;
-    margin-bottom: 50px;
 }
 
 .shop-review-card {
     width: 90%;
-    border: 1px solid #000;
+    border: 1px solid #0066FF;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 10px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .shop-review-flex {
@@ -555,16 +560,19 @@ main {
     width: 100%;
 
 }
+
 .review-five,
 .review-content {
     color: white;
     font-size: 18px;
     margin: 10px 0;
 }
+
 .review-five {
     margin-top: 60px;
     margin-left: 5px;
 }
+
 .rate-form {
     display: flex;
     flex-direction: row-reverse;
@@ -593,4 +601,44 @@ main {
 
 .rate-form input[type=radio]:checked~label {
     color: #ffcc00;
+}
+
+
+.review-rate-form {
+    display: flex;
+    margin: auto 0;
+}
+
+.review-rate-form label {
+    position: relative;
+    padding: 0 5px;
+    font-size: 35px;
+}
+
+.star-checked {
+    color: #ffcc00;
+}
+
+.star-not-checked {
+    color: #eee;
+}
+
+.shop-review-comment {
+    font-size: 20px;
+    line-height: 35px;
+    word-wrap: break-word;
+}
+
+/* pagination */
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}
+.pagination {
+    display: flex;
+}
+.page-item {
+    padding: 5px 10px;
+    border: 1px solid #0066FF;
+    font-size: 16px;
 }

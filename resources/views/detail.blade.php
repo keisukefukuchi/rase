@@ -43,23 +43,30 @@
             </form>
         </div>
         <div class="shop-review">
-            <h1>口コメ</h1>
-            <div class="shop-review-card">
-                <div class="shop-review-flex">
-                    <div class="shop-reivew-left">
-                        <i class="fa-solid fa-star fa-2x"></i>
-                        <i class="fa-solid fa-star fa-2x"></i>
-                        <i class="fa-solid fa-star fa-2x"></i>
-                        <i class="fa-solid fa-star fa-2x"></i>
-                        <i class="fa-solid fa-star fa-2x"></i>
-                    </div>
-                    <div class="shop-review-right">
-                        <p class="shop-review-comment">サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-                            サンプルテキストサンプルテキストサンプルテキストサンプルテキスト
-                        </p>
+            <div class="shop-review-head">
+                <div>
+                    <h1>口コメ</h1>
+                </div>
+                <h1>{{ $reviews->links() }}</h1>
+            </div>
+            @foreach ($reviews as $review)
+                <div class="shop-review-card">
+                    <div class="shop-review-flex">
+                        <div class="shop-reivew-left review-rate-form">
+                            @for ($i=1; $i<=5; $i++)
+                                @if($review->score >= $i)
+                                    <label class="star-checked">★</label>
+                                @else
+                                    <label class="star-not-checked">★</label>
+                                @endif
+                            @endfor
+                        </div>
+                        <div class="shop-review-right">
+                            <p class="shop-review-comment">{{$review->comment}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
         </div>
     </div>
 @endsection
