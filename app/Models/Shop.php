@@ -31,9 +31,13 @@ class Shop extends Model
     {
         return $this->hasMany('App\Models\Like');
     }
-    public function reserves()
+    public function reservations()
     {
-        return $this->hasMany('App\Models\Reserve');
+        return $this->hasMany('App\Models\Reservation');
+    }
+    public function reviews()
+    {
+        return $this->hasMany('App\Models\Review');
     }
     public function is_liked_by_auth_user()
     {
