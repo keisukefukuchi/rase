@@ -253,10 +253,32 @@ main {
     border-radius: 10px;
     position: relative;
 }
+.reservation-input {
+    margin: 20px;
+    width: 90%;
+}
 .reservation-head {
     font-size: 20px;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+.reservation-day,
+.reservation-time,
+.reservation-person {
+    margin: 15px 0;
+}
+.reservation-day input {
+    padding: 5px 0;
+    border-radius: 10px;
+    border: #000;
+}
+.reservation-time input,
+.reservation-person select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 0;
+    border-radius: 10px;
+    border: #000;
 }
 .detail-button {
     position: absolute;
@@ -264,8 +286,9 @@ main {
     border: 0;
     border-radius: 0 0 10px 10px;
     outline: 0;
-    background-color: #0066FF;
+    background-color: blue;
     opacity: 1;
     padding: 10px;
     width: 100%;
+    color: white;
 }
