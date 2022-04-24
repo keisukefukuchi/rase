@@ -45,11 +45,11 @@ class ShopController extends Controller
 
         return view('index', $items);
     }
-    public function detail(Request $request,$id) {
+    public function detail($id) {
         $now = Carbon::now();
         $shop = Shop::find($id);
-        $times = config('times');
-        $numbers = config('numbers');
+        $date = $now->format('Y-m-d');
+        $time = $now->format('H:i');
 
         // $reviews = Review::where('shop_id', $id)
         //     ->orderBy('score', 'desc')
@@ -59,9 +59,8 @@ class ShopController extends Controller
 
         $items = [
             'shop' => $shop,
-
-            'times' => $times,
-            'numbers' => $numbers,
+            'date' => $date,
+            'time' => $time,
             // 'reviews' => $reviews,
             // 'courses' => $courses,
         ];

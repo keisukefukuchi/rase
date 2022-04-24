@@ -24,10 +24,10 @@
                 <div class="reservation-input">
                     <h1 class="reservation-head">予約</h1>
                     <div class="reservation-day">
-                        <input type="date" name="date" value="">
+                        <input type="date" name="date" value="{{$date}}">
                     </div>
                     <div class="reservation-time">
-                        <input type="time" name="time" value="">
+                        <input type="time" name="time" value="{{$time}}">
                     </div>
                     <div class="reservation-person">
                         <select name="num_of_users">
