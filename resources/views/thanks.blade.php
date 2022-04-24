@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.thanks')
 
 @section('title', '会員登録画面')
 
