@@ -8,16 +8,20 @@ use App\Models\Like;
 
 class LikeController extends Controller
 {
-    public function store(Request $request)
+    public function __construct()
+    {
+        $this->middleware(['auth', 'verified'])->only(['store', 'destroy']);
+    }
+    public function store($id)
     {
         $user_id = Auth::id();
-        $shop_id = $request->input('shop_id');
+        $shop_id = $id;
 
         Like::create([
             'user_id' => $user_id,
             'shop_id' => $shop_id,
         ]);
-        return back();
+        return redirect()->back();
     }
 
     public function destroy($id)
@@ -25,7 +29,7 @@ class LikeController extends Controller
         $user_id = Auth::id();
         $shop_id = $id;
 
-        Like::where('user_id',$user_id)->where('shop_id',$shop_id)->delete();
-        return back();
+        Like::where('user_id', $user_id)->where('shop_id', $shop_id)->first()->delete();
+        return redirect()->back();
     }
 }

@@ -186,6 +186,18 @@ main {
     background-color: white;
     color: lightgrey;
 }
+.shop-like-on {
+    border: none;
+    outline: none;
+    background-color: white;
+    color: red;
+}
+.shop-like-off {
+    border: none;
+    outline: none;
+    background-color: white;
+    color: lightgrey;
+}
 .search-form {
     width: 100%;
     margin: 0 auto;

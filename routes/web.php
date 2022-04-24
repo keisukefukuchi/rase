@@ -24,7 +24,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/logout', [AuthController::class,'getLogout']);
     Route::get('/', [ShopController::class,'index']);
     Route::get('/detail/{shop_id}', [ShopController::class,'detail'])->name('shop.detail');
-    Route::post('/like',[LikeController::class,'store']);
+    Route::get('/reply/like/{id}', [LikeController::class, 'store'])->name('shop.like');
+    Route::get('/reply/unlike/{id}', [LikeController::class, 'destroy'])->name('shop.unlike');
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);

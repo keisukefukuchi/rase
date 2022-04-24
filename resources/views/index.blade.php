@@ -15,16 +15,24 @@
                             <p class="genre-name">#{{ $shop->genre->name }}</p>
                         </div>
                         <div class="shop-link">
-                            <form action="{{route('shop.detail',$shop->id)}}" method="get">
+                            <form action="{{ route('shop.detail', $shop->id) }}" method="get">
                                 <button class="shop-details">詳しく見る</button>
                             </form>
-                            <form  class="shop-like" action="/like" method="post">
-                                @csrf
-                                <input class="card__action--like-input" type="hidden" name="shop_id" value="{{$shop->id}}">
-                                <button class="shop-like">
-                                    <i class="fa-solid fa-heart fa-2x"></i>
-                                </button>
-                            </form>
+                            @if ($shop->is_liked_by_auth_user())
+                                <form class="shop-like" action="{{route('shop.unlike', ['id' => $shop->id])}}" method="get">
+                                    @csrf
+                                    <button class="shop-like-on">
+                                        <i class="fa-solid fa-heart fa-2x"></i>
+                                    </button>
+                                </form>
+                            @else
+                                <form class="shop-like" action="{{ route('shop.like', ['id' => $shop->id]) }}" method="get">
+                                    @csrf
+                                    <button class="shop-like">
+                                        <i class="fa-solid fa-heart fa-2x"></i>
+                                    </button>
+                                </form>
+                            @endif
                         </div>
                     </div>
                 </div>
