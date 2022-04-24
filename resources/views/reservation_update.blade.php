@@ -7,7 +7,7 @@
         <div class="detail-wrapper">
             <div class="detail-left">
                 <div class="detail-head">
-                    <a href="/mypage" class="back-shop-page"><</a>
+                    <a href="/mypage" class="back-shop-page">Mypageへ</a>
                     <h1 class="detail-shop-name">{{ $reservation->shop->name }}</h1>
                 </div>
                 <div class="detail-shop_image">
