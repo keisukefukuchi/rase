@@ -33,6 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/mypage/reservation/update/{id}', [ReservationController::class, 'edit'])->name('reservation.update');
     Route::post('/mypage/reservation/update/{id}', [ReservationController::class, 'update'])->name('reservation.update');
     Route::get('/review/{id}', [ReviewController::class, 'index'])->name('review.index');
+    Route::post('/review', [ReviewController::class, 'store']);
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);

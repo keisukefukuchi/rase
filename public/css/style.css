@@ -1,24 +1,29 @@
 html {
     height: 100vh;
 }
+
 body {
     height: 100%;
-    font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro";
+    font-family: "ヒラギノ丸ゴ Pro W4", "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro";
 }
+
 a {
     text-decoration: none;
 }
+
 header {
     width: 100%;
     height: 70px;
     background-color: #0066FF;
 }
+
 .header-guest {
     width: 90%;
     margin: 0 auto;
     display: flex;
     line-height: 70px;
 }
+
 .header {
     width: 90%;
     height: 100%;
@@ -26,15 +31,18 @@ header {
     display: flex;
     justify-content: space-between;
 }
+
 .header-flex {
     display: flex;
     line-height: 70px;
 }
+
 .header-title {
     font-size: 30px;
     color: white;
     margin-left: 40px;
 }
+
 .header-find {
     width: 600px;
     background-color: white;
@@ -42,10 +50,12 @@ header {
     border-radius: 10px;
     padding: 10px 0;
 }
+
 a {
     text-decoration: none;
     color: #0066FF;
 }
+
 .nav {
     position: absolute;
     height: 500vh;
@@ -56,6 +66,7 @@ a {
     text-align: center;
     z-index: 999;
 }
+
 .nav ul {
     position: absolute;
     top: 400px;
@@ -64,10 +75,12 @@ a {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+
 .nav ul li {
     list-style-type: none;
     margin-top: 50px;
 }
+
 .menu {
     line-height: 70px;
     display: inline-block;
@@ -79,6 +92,7 @@ a {
     top: 20px;
     z-index: 999;
 }
+
 .menu__line--top,
 .menu__line--middle,
 .menu__line--bottom {
@@ -89,46 +103,58 @@ a {
     position: absolute;
     transition: 0.5s;
 }
+
 .drawer_link {
     padding: 20px;
     font-weight: bold;
     font-size: 24px;
 }
+
 .menu__line--top {
     top: 0;
 }
+
 .menu__line--middle {
     top: 14px;
 }
+
 .menu__line--bottom {
     bottom: 0;
 }
+
 .menu.open span:nth-of-type(1) {
     top: 14px;
     background-color: #0066FF;
     transform: rotate(45deg);
 }
+
 .menu.open span:nth-of-type(2) {
     opacity: 0;
 }
+
 .menu.open span:nth-of-type(3) {
     top: 14px;
     background-color: #0066FF;
     transform: rotate(-45deg);
 }
+
 .in {
     transform: translateX(100%);
 }
+
 main {
     height: 100vh;
 }
+
 .error {
     color: red;
 }
+
 .container {
     padding: 50px 0;
     width: 100%;
 }
+
 .wrapper {
     width: 90%;
     height: 100%;
@@ -137,6 +163,7 @@ main {
     gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 /* main */
 .card {
     margin: 0 auto;
@@ -144,35 +171,43 @@ main {
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
+
 .shop-img {
     vertical-align: top;
     height: 150px;
     width: 300px;
     border-radius: 10px 10px 0 0;
 }
+
 .content {
     padding: 20px;
 }
+
 .shop-name {
     font-size: 20px;
     padding-bottom: 10px;
 }
+
 .hashtag {
     display: flex;
     padding-bottom: 20px;
 }
+
 .area-name {
     font-size: 14px;
     padding-right: 5px;
 }
+
 .genre-name {
     font-size: 14px;
     padding-left: 5px;
 }
+
 .shop-link {
     display: flex;
     justify-content: space-between;
 }
+
 .shop-details {
     border: none;
     outline: none;
@@ -181,33 +216,39 @@ main {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
 .shop-like {
     border: none;
     outline: none;
     background-color: white;
     color: lightgrey;
 }
+
 .shop-like-on {
     border: none;
     outline: none;
     background-color: white;
     color: red;
 }
+
 .shop-like-off {
     border: none;
     outline: none;
     background-color: white;
     color: lightgrey;
 }
+
 .search-form {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
-.search{
+
+.search {
     border: 1px solid white;
     outline: none;
 }
+
 .search-name {
     display: inline;
 }
@@ -224,13 +265,16 @@ main {
     margin: 0 auto;
     display: flex;
 }
+
 .detail-left {
     width: 40%;
     margin: 0 auto;
 }
+
 .detail-head {
     display: flex;
 }
+
 .back-shop-page {
     background-color: white;
     padding: 8px 15px;
@@ -239,21 +283,26 @@ main {
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
     color: #000;
 }
+
 .detail-shop-name {
     font-size: 24px;
     padding: 5px;
     margin-left: 10px;
 }
+
 .detail-shop_image {
     margin: 20px 0;
 }
-.detail-shop_image img{
+
+.detail-shop_image img {
     width: 100%;
 }
+
 .detail-hashtag {
     display: flex;
     margin: 30px 0;
 }
+
 .detail-hashtag p {
     font-weight: bold;
 }
@@ -263,6 +312,7 @@ main {
     letter-spacing: 3px;
     line-height: 20px;
 }
+
 .detail-right {
     width: 40%;
     margin: 0 auto;
@@ -272,25 +322,30 @@ main {
     border-radius: 10px;
     position: relative;
 }
+
 .reservation-input {
     margin: 20px;
     width: 90%;
 }
+
 .reservation-head {
     font-size: 20px;
     color: white;
     margin-bottom: 30px;
 }
+
 .reservation-day,
 .reservation-time,
 .reservation-person {
     margin: 15px 0;
 }
+
 .reservation-day input {
     padding: 5px 0;
     border-radius: 10px;
     border: #000;
 }
+
 .reservation-time input,
 .reservation-person select {
     width: 100%;
@@ -299,6 +354,7 @@ main {
     border-radius: 10px;
     border: #000;
 }
+
 .detail-button {
     position: absolute;
     bottom: 0;
@@ -311,16 +367,19 @@ main {
     width: 100%;
     color: white;
 }
+
 /* review */
 .shop-review {
     width: 90%;
     margin: 100px auto 0 auto;
 }
+
 .shop-review h1 {
     font-size: 24px;
     text-align: center;
     margin-bottom: 50px;
 }
+
 .shop-review-card {
     width: 90%;
     border: 1px solid #000;
@@ -328,13 +387,16 @@ main {
     padding: 10px;
     margin: 0 auto;
 }
+
 .shop-review-flex {
     display: flex;
     justify-content: space-between;
 }
+
 .shop-review-left {
     width: 40%;
 }
+
 .shop-review-right {
     width: 50%;
 }
@@ -342,20 +404,24 @@ main {
 .shop-review-comment {
     font-size: 18px;
 }
+
 /* mypage */
 .mypage-wrapper {
     width: 90%;
     margin: 0 auto;
     display: flex;
 }
+
 .mypage-left {
     width: 50%;
     margin-right: 10px;
 }
+
 .reservation-informations {
     font-size: 24px;
     margin: 70px 0 30px 0;
 }
+
 .reservation-card {
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
     background-color: #0066FF;
@@ -363,53 +429,65 @@ main {
     padding: 30px 20px 20px 20px;
     margin: 10px 0;
 }
+
 .reservation-card-head {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
 }
+
 .reservation-card-head-left {
     display: flex;
 }
-.reservation-card-head-left i{
+
+.reservation-card-head-left i {
     color: white;
     background-color: #0066FF;
     margin-right: 20px;
 
 }
+
 .reservation-id {
     color: white;
     font-size: 22px;
     line-height: 30px;
 }
+
 .reservation-delite-button {
     border: 0;
     outline: 0;
     background-color: #0066FF;
 }
+
 .reservation-delite {
     color: white;
     background-color: #0066FF;
 }
+
 .reservation-info {
     color: white;
 }
+
 .reservation-info th {
     text-align: left;
     padding: 0 40px 20px 0;
 }
+
 .mypage-right {
     width: 50%;
     margin-left: 10px;
 }
+
 .mypage-user-name {
     font-size: 32px;
     margin-bottom: 50px;
 }
+
 .user-like-shop {
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 .mypage-like {
     width: 100%;
     margin: 0 auto;
@@ -417,14 +495,19 @@ main {
     gap: 26px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+
 .mypage-button-flex {
     display: flex;
     justify-content: flex-end;
 }
-.reservation-update-form,.review-form {
+
+.reservation-update-form,
+.review-form {
     margin: 0 10px;
 }
-.reservation-update-button,.review-button {
+
+.reservation-update-button,
+.review-button {
     border: 1px solid white;
     background-color: #0066FF;
     color: white;
@@ -436,37 +519,78 @@ main {
     display: flex;
     justify-content: space-around;
 }
+
 .review-user-name {
     color: white;
     font-size: 20px;
 }
+
 .review-area {
     width: 100%;
     border-radius: 5px;
 }
+
 .review-input {
     margin: 20px;
     width: 90%;
 }
+
 .review-head {
     font-size: 20px;
     color: white;
     margin-bottom: 30px;
 }
+
 .shop-review-star {
     width: 100%;
     text-align: left;
-    margin-top: 60px;
     margin-bottom: 60px;
 }
+
 .shop-review-star i {
     color: white;
 }
+
 .review-area {
     width: 100%;
+
 }
-.review-five,.review-content {
+.review-five,
+.review-content {
     color: white;
     font-size: 18px;
     margin: 10px 0;
+}
+.review-five {
+    margin-top: 60px;
+    margin-left: 5px;
+}
+.rate-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rate-form input[type=radio] {
+    display: none;
+}
+
+.rate-form label {
+    position: relative;
+    padding: 0 5px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.rate-form label:hover {
+    color: #ffcc00;
+}
+
+.rate-form label:hover~label {
+    color: #ffcc00;
+}
+
+.rate-form input[type=radio]:checked~label {
+    color: #ffcc00;
 }
