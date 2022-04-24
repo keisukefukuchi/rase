@@ -6,7 +6,10 @@
     <div class="container">
         <div class="mypage-review-wrapper">
             <div class="mypage-review-left">
-                <h1 class="mypage-user-name">{{ $items['user']->name }}さん</h1>
+                <div class="mypage-review-head">
+                    <h1 class="mypage-user-name">{{ $items['user']->name }}さん</h1>
+                    <a href="/mypage" class="back-mypage">Mypageへ</a>
+                </div>
                 <h2 class="reservation-informations">レビューできる店舗</h2>
                 @foreach ($items['reservations'] as $items)
                     @foreach ($items as $reservation)
