@@ -20,7 +20,10 @@
                             </form>
                             <form  class="shop-like" action="/like" method="post">
                                 @csrf
-                                <i class="fa-solid fa-heart fa-2x"></i>
+                                <input class="card__action--like-input" type="hidden" name="shop_id" value="{{$shop->id}}">
+                                <button class="shop-like">
+                                    <i class="fa-solid fa-heart fa-2x"></i>
+                                </button>
                             </form>
                         </div>
                     </div>

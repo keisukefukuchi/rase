@@ -181,6 +181,9 @@ main {
     border-radius: 5px;
 }
 .shop-like {
+    border: none;
+    outline: none;
+    background-color: white;
     color: lightgrey;
 }
 .search-form {
