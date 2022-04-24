@@ -48,7 +48,7 @@ a {
 }
 .nav {
     position: absolute;
-    height: 100vh;
+    height: 500vh;
     width: 100%;
     left: -100%;
     background: white;
@@ -58,7 +58,7 @@ a {
 }
 .nav ul {
     position: absolute;
-    top: 40%;
+    top: 400px;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -131,6 +131,7 @@ main {
 }
 .wrapper {
     width: 90%;
+    height: 100%;
     margin: 0 auto;
     display: grid;
     gap: 26px;
