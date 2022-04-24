@@ -3,6 +3,7 @@
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\LikeController;
+use App\Http\Controllers\MypageController;
 use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/reply/like/{id}', [LikeController::class, 'store'])->name('shop.like');
     Route::get('/reply/unlike/{id}', [LikeController::class, 'destroy'])->name('shop.unlike');
     Route::post('/reservation', [ReservationController::class,'store']);
+    Route::get('/mypage/{id}', [MypageController::class,'index'])->name('mypage');
 });
 
 Route::get('/register', [AuthController::class,'getRegister']);
