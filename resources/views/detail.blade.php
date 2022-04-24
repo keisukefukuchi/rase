@@ -47,7 +47,7 @@
                 <div>
                     <h1>口コメ</h1>
                 </div>
-                <h1>{{ $reviews->links() }}</h1>
+                <h1>{{ $reviews->links('vendor.pagination.sample-pagination') }}</h1>
             </div>
             @foreach ($reviews as $review)
                 <div class="shop-review-card">

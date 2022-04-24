@@ -6,15 +6,16 @@
     <div class="container">
         <div class="mypage-wrapper">
             <div class="mypage-left">
+                <h1 class="mypage-user-name">{{ $items['user']->name }}さん</h1>
                 <h2 class="reservation-informations">予約状況</h2>
                 @foreach ($items['reservations'] as $reservation)
                     <div class="reservation-card">
                         <div class="reservation-card-head">
                             <div class="reservation-card-head-left">
                                 <i class="fa-solid fa-clock fa-2x"></i>
-                                <p class="reservation-id">予約{{$reservation->id}}</p>
+                                <p class="reservation-id">予約{{ $reservation->id }}</p>
                             </div>
-                            <form action="{{route('reservation.destory', ['id' => $reservation->id])}}" method="get">
+                            <form action="{{ route('reservation.destory', ['id' => $reservation->id]) }}" method="get">
                                 <button class="reservation-delite-button">
                                     <i class="reservation-delite fa-solid fa-circle-xmark fa-2x"></i>
                                 </button>
@@ -23,30 +24,26 @@
                         <table class="reservation-info">
                             <tr>
                                 <th>Shop</th>
-                                <td>{{$reservation->shop->name}}</td>
+                                <td>{{ $reservation->shop->name }}</td>
                             </tr>
                             <tr>
                                 <th>Date</th>
-                                <td>{{$reservation->start_date}}</td>
+                                <td>{{ $reservation->start_date }}</td>
                             </tr>
                             <tr>
                                 <th>Time</th>
-                                <td>{{$reservation->start_time}}</td>
+                                <td>{{ $reservation->start_time }}</td>
                             </tr>
                             <tr>
                                 <th>Number</th>
-                                <td>{{$reservation->num_of_users}}人</td>
+                                <td>{{ $reservation->num_of_users }}人</td>
                             </tr>
                         </table>
                         <div class="mypage-button-flex">
-                            <form class="reservation-update-form" action="{{route('reservation.update', ['id' => $reservation->id])}}" method="get">
+                            <form class="reservation-update-form"
+                                action="{{ route('reservation.update', ['id' => $reservation->id]) }}" method="get">
                                 <button class="reservation-update-button">
                                     予約情報変更
-                                </button>
-                            </form>
-                            <form class="review-form" action="{{route('review.index', ['id' => $reservation->id])}}" method="get">
-                                <button class="review-button">
-                                    レビュー
                                 </button>
                             </form>
                         </div>
@@ -54,7 +51,9 @@
                 @endforeach
             </div>
             <div class="mypage-right">
-                <h1 class="mypage-user-name">{{ $items['user']->name }}さん</h1>
+                <form action="/mypage/review" method="get">
+                    <button class="mypage-review">Reviewする</button>
+                </form>
                 <h3 class="user-like-shop">お気に入り店舗</h3>
                 <div class="mypage-like">
                     @foreach ($items['shops'] as $shops)
