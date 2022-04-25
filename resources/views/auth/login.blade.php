@@ -18,7 +18,10 @@
                         <input class="login-input login-password" type="password" name="password" placeholder="Password"
                             value="">
                     </div>
-                    <button type="submit" class="login-bottom">ログイン</button>
+                    <div class="login-flex">
+                        <a class="password-request" href="{{ route('password.request') }}">パスワードを忘れた方</a>
+                        <button type="submit" class="login-bottom">ログイン</button>
+                    </div>
                 </form>
             </div>
         </div>

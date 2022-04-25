@@ -47,6 +47,12 @@
     font-size: 18px;
     margin: 10px 0;
 }
+.login-flex {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding: 10px;
+}
 .login-bottom {
     border: none;
     outline: none;
@@ -54,6 +60,8 @@
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    margin-top: 20px;
-    margin-left: 270px;
+}
+.password-request {
+    padding: 5px 10px;
+    display: block;
 }

@@ -44,5 +44,5 @@ Route::get('/login', [AuthController::class,'getLogin'])->name('login');
 Route::post('/login', [AuthController::class,'postLogin']);
 
 
-
+Auth::routes();
 

@@ -57,3 +57,13 @@
     margin-top: 20px;
     margin-left: 270px;
 }
+.register-reset {
+    border: none;
+    outline: none;
+    background-color: #0066FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 210px;
+}
