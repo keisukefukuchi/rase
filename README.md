@@ -43,9 +43,11 @@
 - [ ] push時自動テスト（circleci）
 <br>
 <br>
+
 ![](public/image/main.png)
 <br>
 <br>
+
 ![](public/image/mypage.png)
 
 ## 環境構築
