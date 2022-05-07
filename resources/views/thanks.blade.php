@@ -7,18 +7,25 @@
         <div class="thanks-wrapper">
             <div class="thanks-box">
                 <h1 class="thanks-title">会員登録ありがとうございます</h1>
-                <form class="thanks-form" action="/login" method="post">
-                    @csrf
-                    <div class="email">
-                        <input class="thanks-input thanks-email" type="hidden" name="email" placeholder="Email" value="{{ $email }}">
-                    </div>
-                    <div class="password">
-                        <input class="thanks-input thanks-password" type="hidden" name="password" placeholder="Password" value="{{ $password }}">
-                    </div>
-                    <div class="button">
-                        <button type="submit" class="button thanks-bottom">ログインする</button>
-                    </div>
-                </form>
+                <div class="thanks">
+                    <form class="resend" method="POST" action="{{ route('verification.send') }}">
+                        @csrf
+
+                        <div>
+                            <button class="button thanks-bottom">
+                                メール再送信
+                            </button>
+                        </div>
+                    </form>
+
+                    <form class="logout" method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <div class="button">
+                            <button type="submit" class="button thanks-bottom">ログアウト</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

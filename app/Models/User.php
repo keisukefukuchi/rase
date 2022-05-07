@@ -11,7 +11,7 @@ use App\Mail\BareMail;
 use App\Notifications\PasswordResetNotification;
 
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 

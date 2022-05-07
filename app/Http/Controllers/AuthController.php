@@ -24,10 +24,11 @@ class AuthController extends Controller
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
         ]);
-        return view('thanks')->with([
-            'email'=>$request['email'],
-            'password'=>$request['password']
-        ]);
+        return redirect('verify-email');
+        // return view('auth.verify-email')->with([
+        //     'email'=>$request['email'],
+        //     'password'=>$request['password']
+        // ]);
     }
 
     public function getLogin()
