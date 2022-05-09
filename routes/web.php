@@ -6,6 +6,13 @@ use App\Http\Controllers\LikeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\EmailVerificationNotificationController;
+use App\Http\Controllers\Auth\EmailVerificationPromptController;
+use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Auth\ConfirmablePasswordController;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,7 +28,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth')->group(function () {
+
+
+Route::middleware('auth','verified')->group(function () {
     Route::get('/logout', [AuthController::class,'getLogout']);
     Route::get('/', [ShopController::class,'index']);
     Route::get('/detail/{shop_id}', [ShopController::class,'detail'])->name('shop.detail');
@@ -44,5 +53,9 @@ Route::get('/login', [AuthController::class,'getLogin'])->name('login');
 Route::post('/login', [AuthController::class,'postLogin']);
 
 
-Auth::routes();
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
