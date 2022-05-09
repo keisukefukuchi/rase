@@ -7,7 +7,7 @@
     <div class="register-container">
         <div class="register-wrapper">
             <div class="register-box">
-                <p class="register-title">Registration</p>
+                <p class="register-title">Password Reset</p>
                 <form class="register-form" action="{{ route('password.update') }}" method="post">
                     @csrf
                     <input type="hidden" name="token" value="{{ $request->route('token') }}">
@@ -32,7 +32,7 @@
                         <x-input id="password_confirmation" class="block mt-1 w-full register-input register-password" type="password"
                             name="password_confirmation" required placeholder="PasswordConfirmation"/>
                     </div>
-                    <button type="submit" class="register-bottom">会員登録</button>
+                    <button type="submit" class="register-reset">パスワードリセット</button>
                 </form>
             </div>
         </div>
