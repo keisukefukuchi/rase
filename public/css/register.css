@@ -67,3 +67,24 @@
     margin-top: 20px;
     margin-left: 210px;
 }
+.password-reset-bottom{
+    border: none;
+    outline: none;
+    background-color: #0066FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 210px;
+}
+
+.reset-path {
+    padding-top: 30px;
+    color: greenyellow;
+    text-align: center;
+}
+.reset-error {
+    color: red;
+    list-style: none;
+    text-align: center;
+}
