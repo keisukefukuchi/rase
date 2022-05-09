@@ -1,48 +1,40 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+@extends('layouts.app')
 
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
+@section('title', '会員登録画面')
 
-            <!-- Password Reset Token -->
-            <input type="hidden" name="token" value="{{ $request->route('token') }}">
-
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+@section('content')
+    <div class="register-container">
+        <div class="register-wrapper">
+            <div class="register-box">
+                <p class="register-title">Registration</p>
+                <form class="register-form" action="{{ route('password.update') }}" method="post">
+                    @csrf
+                    <input type="hidden" name="token" value="{{ $request->route('token') }}">
+                    <div class="email">
+                        @error('email')
+                            <p class="error">{{ $message }}</p>
+                        @enderror
+                        <i class="icon fa-solid fa-envelope fa-lg"></i>
+                        <input class="register-input register-email" type="email" name="email" placeholder="Email" value="">
+                    </div>
+                    <div class="password">
+                        @error('password')
+                            <p class="error">{{ $message }}</p>
+                        @enderror
+                        <i class="icon fa-solid fa-lock fa-lg"></i>
+                        <input class="register-input register-password" type="password" name="password"
+                            placeholder="Password" value="">
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="mt-4">
+                        <i class="icon fa-solid fa-lock fa-lg"></i>
+                        <x-input id="password_confirmation" class="block mt-1 w-full register-input register-password" type="password"
+                            name="password_confirmation" required placeholder="PasswordConfirmation"/>
+                    </div>
+                    <button type="submit" class="register-bottom">会員登録</button>
+                </form>
             </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                    type="password"
-                                    name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <x-button>
-                    {{ __('Reset Password') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        </div>
+    </div>
+@endsection
