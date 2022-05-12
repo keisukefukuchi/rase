@@ -22,10 +22,10 @@ class ReviewFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => $this->faker->numberBetween(1,5),
+            'user_id' => $this->faker->numberBetween(1,10),
             'shop_id' => $this->faker->numberBetween(1,20),
             'score' => $this->faker->numberBetween(1,5),
-            'comment' => $this->faker->sentence(),
+            'comment' => $this->faker->realText(50)
         ];
     }
 }
