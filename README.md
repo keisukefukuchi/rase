@@ -49,7 +49,7 @@
 - 不要なファイルの削除
 - クラス名の統一性
 
-![](public/image/main.png)
+![](public/image/top.png)
 
 <br>
 <br>
