@@ -47,7 +47,11 @@
                 <div>
                     <h1>口コメ</h1>
                 </div>
-                <h1>{{ $reviews->links('vendor.pagination.sample-pagination') }}</h1>
+                <div class="paginations">
+                    <span class="pagination-total">{{ $reviews->total() }}件中</span>
+                    <span class="pagination-firstItem">{{ $reviews->firstItem() }}〜{{ $reviews->lastItem() }} 件を表示</span>
+                    <h1 class="pagination-link">{{ $reviews->links('vendor.pagination.sample-pagination') }}</h1>
+                </div>
             </div>
             @foreach ($reviews as $review)
                 <div class="shop-review-card">

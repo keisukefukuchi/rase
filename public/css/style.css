@@ -668,10 +668,17 @@ svg.w-5.h-5 {
     display: flex;
 }
 
+.paginations {
+    text-align: right;
+}
+
 .page-item {
     padding: 5px 10px;
     border: 1px solid #0066FF;
     font-size: 16px;
+}
+.pagination-link {
+    margin-top: 10px;
 }
 
 /* mypage-review */

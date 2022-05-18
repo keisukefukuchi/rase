@@ -74,7 +74,7 @@ class ShopController extends Controller
 
         $tomorrow = $now->tomorrow()->format('Y-m-d');
 
-        $reviews = Review::where('shop_id', $id)->paginate(2);
+        $reviews = Review::where('shop_id', $id)->paginate(5);
         // $courses = Course::where('shop_id', $id)->get();
 
         $items = [
