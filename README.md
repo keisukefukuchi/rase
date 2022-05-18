@@ -50,6 +50,7 @@
 - クラス名の統一性
 
 ![](public/image/main.png)
+
 <br>
 <br>
 
