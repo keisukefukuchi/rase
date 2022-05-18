@@ -36,6 +36,23 @@ class ShopController extends Controller
         $genres = Genre::all();
         $areas = Area::all();
 
+        $comments = array();
+        foreach($shops as $shop) {
+            $count = 0;
+            $score = 0;
+            $reviews = Review::where('shop_id', $shop->id)->get();
+            foreach($reviews as $review) {
+                $count += 1;
+                $score += $review->score;
+            }
+            $score = round($score/$count,1);
+            $comments[] = [
+                'shop_id' => $shop->id,
+                'score' => $score,
+                'count' => $count
+            ];
+        }
+
         $items = [
             'shops' => $shops,
             'genres' => $genres,
@@ -43,6 +60,8 @@ class ShopController extends Controller
             'shop_name' => $shop_name,
             'area_id' => $area_id,
             'genre_id' => $genre_id,
+            'count' => $count,
+            'comments' => $comments
         ];
 
 

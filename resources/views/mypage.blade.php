@@ -62,6 +62,21 @@
                                 <img class="shop-img" src="{{ $shop->img_url }}" alt="">
                                 <div class="content">
                                     <h1 class="shop-name">{{ $shop->name }}</h1>
+                                    @foreach ($items['comments'] as $comment)
+                                        @if ($comment['shop_id'] == $shop->id)
+                                            <div class="average-score mb-3">
+                                                <div class="star-rating ml-2">
+                                                    <div class="star-rating-front" style="width: {{ ($comment['score'] * 100) / 5 }}%">
+                                                        ★★★★★</div>
+                                                    <div class="star-rating-back">★★★★★</div>
+                                                </div>
+                                                <div class="average-score-display">
+                                                    <p class="comment">{{ $comment['score'] }}</p>
+                                                </div>
+                                                <p class="comment">({{ $comment['count'] }}件)</p>
+                                            </div>
+                                        @endif
+                                    @endforeach
                                     <div class="hashtag">
                                         <p class="area-name">#{{ $shop->area->name }}</p>
                                         <p class="genre-name">#{{ $shop->genre->name }}</p>
