@@ -19,8 +19,7 @@ class UserController extends Controller
     {
         $user_id = Auth::id();
         $user =  User::where('id', $user_id)->first();
-        $reservations = Reservation::with(['shop'])->where('user_id', $user_id)->get();
-
+        $reservations = Reservation::join('shops','reservations.shop_id', '=', 'shops.id')->where('user_id', $user_id)->get();
         foreach ($reservations as $reservation) {
             $start_time = $reservation->start_time;
             $reservation->start_time = date('H:i', strtotime($start_time));
@@ -58,7 +57,6 @@ class UserController extends Controller
             'shops' => $shops,
             'comments' => $comments
         ];
-
         return view('mypage', ['items' => $items]);
     }
 
@@ -67,7 +65,7 @@ class UserController extends Controller
         $user_id = Auth::id();
         $user =  User::where('id', $user_id)->first();
         $now = Carbon::now();
-        $now_date = $now->format('y-m-d');
+        $now_date = $now->format('yyyy-m-d');
         $now_time = $now->format('H:i');
 
         $items = Reservation::with(['shop'])->where('user_id', $user_id)->get();
@@ -75,14 +73,13 @@ class UserController extends Controller
         foreach ($items as $item) {
             $start_time = $item->start_time;
             $item->start_time = date('H:i', strtotime($start_time));
+            if ($now_date >= $item->start_date && $now_time >= $item->start_time) {
 
-            if ($now_date <= $item->start_date && $now_time <= $item->start_time) {
                 $reservations[] = [
                     'item' => $item
                 ];
             }
         }
-
 
         $items = [
             'user' => $user,
