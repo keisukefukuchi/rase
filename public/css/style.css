@@ -443,16 +443,18 @@ main {
 
 .reservation-card {
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
-    background-color: #0066FF;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 30px 20px 20px 20px;
     margin: 10px 0;
+    border-radius: 10px;
 }
 
 .reservation-card-head {
     display: flex;
+    padding: 10px;
+    background-color: #0066FF;
     justify-content: space-between;
-    margin-bottom: 30px;
+    border-radius: 10px 10px 0 0;
 }
 
 .reservation-card-head-left {
@@ -479,6 +481,8 @@ main {
 }
 
 .reservation-delite {
+    display: flex;
+    justify-content: space-between;
     color: white;
     background-color: #0066FF;
 }
@@ -487,13 +491,16 @@ main {
 }
 .reservation-shop-img img{
     vertical-align: top;
-    height: 150px;
-    width: 300px;
-    border-radius: 10px;
+    height: 250px;
+    width: 350px;
+    border-radius: 0 0 0 10px;
 }
 
 .reservation-info {
-    color: white;
+    height: 150px;
+    margin: auto 30px;
+    color: #000000;
+    align-items: center;
 }
 
 .reservation-info th {
@@ -529,8 +536,8 @@ main {
 }
 
 .mypage-button-flex {
-    display: flex;
-    justify-content: flex-end;
+    height: 150px;
+    margin: auto;
 }
 
 .reservation-update-form,
@@ -539,11 +546,19 @@ main {
 }
 
 .reservation-update-button,
-.review-button {
+.reservation-detail,
+.reservation-delite-button {
+    width: 130px;
     border: 1px solid white;
     background-color: #0066FF;
     color: white;
     border-radius: 10px;
+    padding: 10px;
+}
+
+.reservation-delite-button {
+    background-color: red;
+    color: white;
 }
 
 /* tab */

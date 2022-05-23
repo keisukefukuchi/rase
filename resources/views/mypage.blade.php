@@ -7,8 +7,8 @@
         <div class="mypage-wrapper">
             <div class="tab">
                 <ul class="tab-menu">
-                    <li class="tab-menu__item active">お気に入り店舗</li>
-                    <li class="tab-menu__item">予約店舗情報</li>
+                    <li class="tab-menu__item active">お気に入り</li>
+                    <li class="tab-menu__item">予約一覧</li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-content__item show">
@@ -80,12 +80,6 @@
                                         <i class="fa-solid fa-clock fa-2x"></i>
                                         <p class="reservation-id">予約{{ $reservation->id }}</p>
                                     </div>
-                                    <form action="{{ route('reservation.destory', ['id' => $reservation->id]) }}"
-                                        method="get">
-                                        <button class="reservation-delite-button">
-                                            <i class="reservation-delite fa-solid fa-circle-xmark fa-2x"></i>
-                                        </button>
-                                    </form>
                                 </div>
                                 <div class="reservation-shop-detail">
                                     <div class="reservation-shop-img">
@@ -93,31 +87,40 @@
                                     </div>
                                     <table class="reservation-info">
                                         <tr>
-                                            <th>Shop</th>
+                                            <th>店舗名</th>
                                             <td>{{ $reservation->shop->name }}</td>
                                         </tr>
                                         <tr>
-                                            <th>Date</th>
+                                            <th>来店日</th>
                                             <td>{{ $reservation->start_date }}</td>
                                         </tr>
                                         <tr>
-                                            <th>Time</th>
+                                            <th>来店時刻</th>
                                             <td>{{ $reservation->start_time }}</td>
                                         </tr>
                                         <tr>
-                                            <th>Number</th>
+                                            <th>来店人数</th>
                                             <td>{{ $reservation->num_of_users }}人</td>
                                         </tr>
                                     </table>
-                                </div>
-                                <div class="mypage-button-flex">
-                                    <form class="reservation-update-form"
-                                        action="{{ route('reservation.update', ['id' => $reservation->id]) }}"
-                                        method="get">
-                                        <button class="reservation-update-button">
-                                            予約情報変更
-                                        </button>
-                                    </form>
+                                    <div class="mypage-button-flex">
+                                        <form class="reservation-update-form"
+                                            action="{{ route('reservation.update', ['id' => $reservation->id]) }}"
+                                            method="get">
+                                            <button class="reservation-update-button">
+                                                予約情報変更
+                                            </button>
+                                        </form>
+                                        <form action="{{ route('shop.detail', $shop->id) }}" method="get" class="reservation-update-form">
+                                            <button class="reservation-detail">詳しく見る</button>
+                                        </form>
+                                        <form action="{{ route('reservation.destory', ['id' => $reservation->id]) }}"
+                                            method="get" class="reservation-update-form">
+                                            <button class="reservation-delite-button">
+                                                キャンセル
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
