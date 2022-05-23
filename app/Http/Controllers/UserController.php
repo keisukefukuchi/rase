@@ -19,7 +19,10 @@ class UserController extends Controller
     {
         $user_id = Auth::id();
         $user =  User::where('id', $user_id)->first();
-        $reservations = Reservation::join('shops','reservations.shop_id', '=', 'shops.id')->where('user_id', $user_id)->get();
+        $reservations = Reservation::join('shops','reservations.shop_id', '=', 'shops.id')
+        ->select('reservations.*','shops.name','shops.img_url','shops.description')
+        ->where('user_id', $user_id)->get();
+      
         foreach ($reservations as $reservation) {
             $start_time = $reservation->start_time;
             $reservation->start_time = date('H:i', strtotime($start_time));
@@ -57,6 +60,7 @@ class UserController extends Controller
             'shops' => $shops,
             'comments' => $comments
         ];
+
         return view('mypage', ['items' => $items]);
     }
 

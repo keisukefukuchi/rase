@@ -111,7 +111,7 @@
                                                 予約情報変更
                                             </button>
                                         </form>
-                                        <form action="{{ route('shop.detail', $shop->id) }}" method="get" class="reservation-update-form">
+                                        <form action="{{ route('shop.detail', $reservation->shop->id) }}" method="get" class="reservation-update-form">
                                             <button class="reservation-detail">詳しく見る</button>
                                         </form>
                                         <form action="{{ route('reservation.destory', ['id' => $reservation->id]) }}"

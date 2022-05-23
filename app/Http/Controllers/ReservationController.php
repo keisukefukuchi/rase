@@ -30,12 +30,14 @@ class ReservationController extends Controller
         return view('reservation');
     }
     public function edit($id) {
+        dd($id);
         $reservation = Reservation::with(['shop'])->where('id', $id)->first();
         return view('reservation_update',[
             'reservation' => $reservation,
         ]);
     }
     public function update(Request $request,$id) {
+
         $items = $request->all();
         unset($items['_token']);
         $reservation = Reservation::where('id', $id)->first();

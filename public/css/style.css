@@ -488,15 +488,22 @@ main {
 }
 .reservation-shop-detail {
     display: flex;
+    width: 100%;
 }
+
+.reservation-shop-img {
+    width: 350px;
+}
+
 .reservation-shop-img img{
     vertical-align: top;
     height: 250px;
-    width: 350px;
+    width: 100%;
     border-radius: 0 0 0 10px;
 }
 
 .reservation-info {
+    width: 30%;
     height: 150px;
     margin: auto 30px;
     color: #000000;
