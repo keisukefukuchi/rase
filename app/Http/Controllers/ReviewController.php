@@ -20,6 +20,8 @@ class ReviewController extends Controller
         $shop = Shop::where('id',$shop_id)->first();
         $user = User::where('id',$user_id)->first();
 
+        
+
         return view('review',[
             'shop' => $shop,
             'user' => $user

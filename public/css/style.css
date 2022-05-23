@@ -434,12 +434,6 @@ main {
 .mypage-wrapper {
     width: 90%;
     margin: 0 auto;
-    display: flex;
-}
-
-.mypage-left {
-    width: 50%;
-    margin-right: 10px;
 }
 
 .reservation-informations {
@@ -449,16 +443,18 @@ main {
 
 .reservation-card {
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
-    background-color: #0066FF;
+    background-color: #ffffff;
     border-radius: 10px;
-    padding: 30px 20px 20px 20px;
     margin: 10px 0;
+    border-radius: 10px;
 }
 
 .reservation-card-head {
     display: flex;
+    padding: 10px;
+    background-color: #0066FF;
     justify-content: space-between;
-    margin-bottom: 30px;
+    border-radius: 10px 10px 0 0;
 }
 
 .reservation-card-head-left {
@@ -485,22 +481,38 @@ main {
 }
 
 .reservation-delite {
+    display: flex;
+    justify-content: space-between;
     color: white;
     background-color: #0066FF;
 }
+.reservation-shop-detail {
+    display: flex;
+    width: 100%;
+}
+
+.reservation-shop-img {
+    width: 350px;
+}
+
+.reservation-shop-img img{
+    vertical-align: top;
+    height: 250px;
+    width: 100%;
+    border-radius: 0 0 0 10px;
+}
 
 .reservation-info {
-    color: white;
+    width: 30%;
+    height: 150px;
+    margin: auto 30px;
+    color: #000000;
+    align-items: center;
 }
 
 .reservation-info th {
     text-align: left;
     padding: 0 40px 20px 0;
-}
-
-.mypage-right {
-    width: 50%;
-    margin-left: 10px;
 }
 
 .mypage-user-name {
@@ -510,7 +522,7 @@ main {
 .mypage-review {
     font-size: 20px;
     margin-bottom: 50px;
-    border: 1px solid #0066FF;
+    border: none;
     outline: 0;
     border-radius: 10px;
     background-color: #0066FF;
@@ -531,8 +543,8 @@ main {
 }
 
 .mypage-button-flex {
-    display: flex;
-    justify-content: flex-end;
+    height: 150px;
+    margin: auto;
 }
 
 .reservation-update-form,
@@ -541,11 +553,59 @@ main {
 }
 
 .reservation-update-button,
-.review-button {
+.reservation-detail,
+.reservation-delite-button {
+    width: 130px;
     border: 1px solid white;
     background-color: #0066FF;
     color: white;
     border-radius: 10px;
+    padding: 10px;
+}
+
+.reservation-delite-button {
+    background-color: red;
+    color: white;
+}
+
+/* tab */
+.tab {
+    width: 100%;
+}
+
+.tab-menu {
+    width: 100%;
+    margin: 0 auto 50px auto;
+    display: flex;
+}
+
+.tab-menu__item {
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+    border: 1px solid #0066FF;
+    background: #ffffff;
+    color: #0066FF;
+}
+
+.tab-menu__item:not(:first-child) {
+    border-left: none;
+}
+
+.tab-menu__item.active {
+    background: #0066FF;
+    color: #ffffff;
+}
+
+
+.tab-content__item {
+    display: none;
+}
+
+.tab-content__item.show {
+    display: block;
 }
 
 /* review */
@@ -677,6 +737,7 @@ svg.w-5.h-5 {
     border: 1px solid #0066FF;
     font-size: 16px;
 }
+
 .pagination-link {
     margin-top: 10px;
 }
