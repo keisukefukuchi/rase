@@ -17,12 +17,16 @@ class UserController extends Controller
 {
     public function index()
     {
+        $now = Carbon::now();
+        $now_date = $now->format('Y-m-d');
+        $now_time = $now->format('H:i');
+
         $user_id = Auth::id();
         $user =  User::where('id', $user_id)->first();
         $reservations = Reservation::join('shops','reservations.shop_id', '=', 'shops.id')
         ->select('reservations.*','shops.name','shops.img_url','shops.description')
         ->where('user_id', $user_id)->get();
-      
+
         foreach ($reservations as $reservation) {
             $start_time = $reservation->start_time;
             $reservation->start_time = date('H:i', strtotime($start_time));
@@ -58,9 +62,11 @@ class UserController extends Controller
             'user' => $user,
             'reservations' => $reservations,
             'shops' => $shops,
-            'comments' => $comments
+            'comments' => $comments,
+            'now_date' => $now_date,
+            'now_time' => $now_time
         ];
-
+        
         return view('mypage', ['items' => $items]);
     }
 
