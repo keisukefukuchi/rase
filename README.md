@@ -54,7 +54,13 @@
 <br>
 <br>
 
-![](public/image/mypage.png)
+![](public/image/like.png)
+
+<br>
+<br>
+
+![](public/image/reservation.png)
+
 
 ## 環境構築
 - git clone https://github.com/keisukefukuchi/rase.git
