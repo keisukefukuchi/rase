@@ -70,9 +70,6 @@
                         </div>
                     </div>
                     <div class="tab-content__item">
-                        <form action="/mypage/review" method="get">
-                            <button class="mypage-review">Reviewする</button>
-                        </form>
                         @foreach ($items['reservations'] as $reservation)
                             <div class="reservation-card">
                                 <div class="reservation-card-head">
@@ -114,12 +111,21 @@
                                         <form action="{{ route('shop.detail', $reservation->shop->id) }}" method="get" class="reservation-update-form">
                                             <button class="reservation-detail">詳しく見る</button>
                                         </form>
+                                        @if ($items['now_date'] >= $reservation->start_date && $items['now_time'] >= $reservation->start_time)
+                                        <form action="{{ route('shop.detail', $reservation->shop->id) }}" method="get" class="reservation-update-form">
+                                            <button class="reservation-detail rereservation">もう一度予約する</button>
+                                        </form>
+                                        <form action="{{ route('review.index', ['id' => $reservation->id]) }}" method="get" class="reservation-update-form">
+                                            <button class="mypage-review">Reviewする</button>
+                                        </form>
+                                        @else
                                         <form action="{{ route('reservation.destory', ['id' => $reservation->id]) }}"
                                             method="get" class="reservation-update-form">
                                             <button class="reservation-delite-button">
                                                 キャンセル
                                             </button>
                                         </form>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

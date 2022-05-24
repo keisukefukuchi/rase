@@ -445,7 +445,7 @@ main {
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
     background-color: #ffffff;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     border-radius: 10px;
 }
 
@@ -519,16 +519,6 @@ main {
     font-size: 32px;
 }
 
-.mypage-review {
-    font-size: 20px;
-    margin-bottom: 50px;
-    border: none;
-    outline: 0;
-    border-radius: 10px;
-    background-color: #0066FF;
-    color: white;
-}
-
 .user-like-shop {
     font-size: 24px;
     margin-bottom: 20px;
@@ -554,13 +544,26 @@ main {
 
 .reservation-update-button,
 .reservation-detail,
-.reservation-delite-button {
+.reservation-delite-button,
+.mypage-review {
     width: 130px;
     border: 1px solid white;
     background-color: #0066FF;
     color: white;
     border-radius: 10px;
     padding: 10px;
+}
+
+.mypage-review {
+    border: none;
+    outline: 0;
+    background-color: #FFCC33;
+    color: white;
+}
+
+.rereservation {
+    background-color: #00CC33;
+    color: white;
 }
 
 .reservation-delite-button {
