@@ -17,3 +17,17 @@ function tabSwitch() {
   const index = arrayTabs.indexOf(this);
   document.getElementsByClassName('tab-content__item')[index].classList.add('show');
 };
+
+var search__input = document.getElementsByClassName('search__input');
+
+  for(let i=0; i<search__input.length; i++) {
+    search__input[i].addEventListener('input', function() {
+      search__form.submit();
+    });
+	}
+
+  var search__change = document.getElementById('search__change');
+
+  search__change.addEventListener('change', function () {
+    search__form.submit();
+  })
