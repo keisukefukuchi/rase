@@ -20,6 +20,8 @@ class CreateShopsTable extends Migration
             $table->foreign('area_id')->references('id')->on('areas');
             $table->unsignedBigInteger('genre_id');
             $table->foreign('genre_id')->references('id')->on('genres');
+            $table->string('course');
+            $table->integer('price');
             $table->text('description');
             $table->string('img_url');
             $table->timestamps();
