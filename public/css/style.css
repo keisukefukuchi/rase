@@ -385,6 +385,20 @@ main {
     width: 100%;
     color: white;
 }
+.reserve__contents {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #0066CC;
+    border-radius: 5px;
+    padding: 10px;
+}
+.reserve__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.reserve__container dd {
+}
 
 /* review */
 .shop-review {

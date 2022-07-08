@@ -39,6 +39,28 @@
                         </select>
                     </div>
                 </div>
+                <dl class="reserve__contents">
+                    <div class="reserve__container">
+                        <dt>Shop</dt>
+                        <dd>{{ $shop->name }}</dd>
+                    </div>
+                    <div class="reserve__container">
+                        <dt>Price</dt>
+                        <dd>{{ $shop->course }}({{ $shop->price }}円)/人</dd>
+                    </div>
+                    <div class="reserve__container">
+                        <dt>Date</dt>
+                        <dd id="date__show">{{ now()->addDay(1)->format('Y-m-d') }}</dd>
+                    </div>
+                    <div class="reserve__container">
+                        <dt>Time</dt>
+                        <dd id="time__show">時間</dd>
+                    </div>
+                    <div class="reserve__container">
+                        <dt>Number</dt>
+                        <dd id="number__show">人数</dd>
+                    </div>
+                </dl>
                 <button class="detail-button">予約する</button>
             </form>
         </div>
@@ -49,7 +71,8 @@
                 </div>
                 <div class="paginations">
                     <span class="pagination-total">{{ $reviews->total() }}件中</span>
-                    <span class="pagination-firstItem">{{ $reviews->firstItem() }}〜{{ $reviews->lastItem() }} 件を表示</span>
+                    <span class="pagination-firstItem">{{ $reviews->firstItem() }}〜{{ $reviews->lastItem() }}
+                        件を表示</span>
                     <h1 class="pagination-link">{{ $reviews->links('vendor.pagination.sample-pagination') }}</h1>
                 </div>
             </div>
@@ -57,8 +80,8 @@
                 <div class="shop-review-card">
                     <div class="shop-review-flex">
                         <div class="shop-reivew-left review-rate-form">
-                            @for ($i=1; $i<=5; $i++)
-                                @if($review->score >= $i)
+                            @for ($i = 1; $i <= 5; $i++)
+                                @if ($review->score >= $i)
                                     <label class="star-checked">★</label>
                                 @else
                                     <label class="star-not-checked">★</label>
@@ -66,7 +89,7 @@
                             @endfor
                         </div>
                         <div class="shop-review-right">
-                            <p class="shop-review-comment">{{$review->comment}}</p>
+                            <p class="shop-review-comment">{{ $review->comment }}</p>
                         </div>
                     </div>
                 </div>
