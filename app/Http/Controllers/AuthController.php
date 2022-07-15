@@ -48,9 +48,14 @@ class AuthController extends Controller
         }
     }
 
-    public function getLogout()
+    public function getLogout(Request $request)
     {
-        Auth::logout();
-        return redirect('login');
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }
