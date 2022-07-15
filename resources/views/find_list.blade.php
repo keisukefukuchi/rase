@@ -11,7 +11,7 @@
     <select id="genre" name="genre" class="search-genre search search__input" >
         <option value="0">All genre</option>
         @foreach ($genres as $genre)
-            <option value="{{ $genre->id }}"  {{ ($genre_id ?? '') == $genre->id ? 'selected' : '' }}>
+            <option value="{{ $genre->id }}" {{ ($genre_id ?? '') == $genre->id ? 'selected' : '' }}>
                 {{ $genre->name }}
             </option>
         @endforeach
