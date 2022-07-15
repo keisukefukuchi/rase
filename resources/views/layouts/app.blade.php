@@ -45,7 +45,12 @@
                     <nav class="nav" id="nav">
                         <ul>
                             <li><a class="drawer_link" href="/">HOME</a></li>
-                            <li><a class="drawer_link" href="/logout">Logout</a></li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button class="drawer_link drawer_button">Logout</button>
+                                </form>
+                            </li>
                             <li><a class="drawer_link" href="/mypage">Mypage</a></li>
                         </ul>
                     </nav>

@@ -34,5 +34,15 @@ class AuthServiceProvider extends ServiceProvider
                 ->line('下のボタンをクリックして、メールアドレスの確認をしてください。')
                 ->action('メールアドレス認証', $url);
         });
+
+        // 管理者権限設定
+        Gate::define('isAdmin',function($user){
+            return $user->role === 1;
+        });
+
+        // 代表者権限設定
+        Gate::define('isRepresentative',function($user){
+            return $user->role === 2;
+        });
     }
 }

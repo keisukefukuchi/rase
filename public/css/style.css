@@ -116,7 +116,13 @@ a {
 
 .drawer_link {
     padding: 20px;
-    font-weight: bold;
+    font-size: 24px;
+}
+
+.drawer_button {
+    color: #0066FF;
+    background-color: white;
+    border: none;
     font-size: 24px;
 }
 
